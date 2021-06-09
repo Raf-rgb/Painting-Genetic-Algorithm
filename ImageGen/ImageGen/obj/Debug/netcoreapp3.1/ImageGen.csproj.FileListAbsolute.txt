@@ -1,0 +1,15 @@
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\bin\Debug\netcoreapp3.1\ImageGen.exe
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\bin\Debug\netcoreapp3.1\ImageGen.deps.json
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\bin\Debug\netcoreapp3.1\ImageGen.runtimeconfig.json
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\bin\Debug\netcoreapp3.1\ImageGen.runtimeconfig.dev.json
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\bin\Debug\netcoreapp3.1\ImageGen.dll
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\bin\Debug\netcoreapp3.1\ImageGen.pdb
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\obj\Debug\netcoreapp3.1\ImageGen.csprojAssemblyReference.cache
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\obj\Debug\netcoreapp3.1\ImageGen.Form1.resources
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\obj\Debug\netcoreapp3.1\ImageGen.csproj.GenerateResource.cache
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\obj\Debug\netcoreapp3.1\ImageGen.AssemblyInfoInputs.cache
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\obj\Debug\netcoreapp3.1\ImageGen.AssemblyInfo.cs
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\obj\Debug\netcoreapp3.1\ImageGen.csproj.CoreCompileInputs.cache
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\obj\Debug\netcoreapp3.1\ImageGen.dll
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\obj\Debug\netcoreapp3.1\ImageGen.pdb
+C:\Users\Rafael\source\repos\ImageGen\ImageGen\obj\Debug\netcoreapp3.1\ImageGen.genruntimeconfig.cache
