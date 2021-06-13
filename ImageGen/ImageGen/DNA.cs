@@ -11,7 +11,9 @@ namespace ImageGen
         // de triagulos a dibujar, el numero de vertices
         // y las posiciones de cada vertice, asi como
         // tambien el color de cada triangulo
-        Polygon[] genes;
+        //Polygon[] genes; // Genes siendo triangulos
+
+        Ellipse[] genes; // Genes siendo elipses
 
         // Valor de aptitud de cada individuo
         public double fitness = 0;
@@ -19,7 +21,7 @@ namespace ImageGen
         // Numero de triangulos a dibujar,
         // numero de vertices de cada triangulo
         // el numero de componentes de las coordenadas
-        int nPolygons, nVertex;
+        int nShapes, nVertex;
 
         // Bitmap para la imagen generada
         public Bitmap newPaint;
@@ -29,7 +31,7 @@ namespace ImageGen
 
         public DNA()
         {
-            nPolygons = 500;
+            nShapes = 1500;
             nVertex = 3;
 
             Init();
@@ -39,12 +41,18 @@ namespace ImageGen
         public void Init()
         {
             // Se inicializan los genes y el color
-            genes = new Polygon[nPolygons];
+            //genes = new Polygon[nPolygons];
+            genes = new Ellipse[nShapes];
 
             newPaintColors = new Color[200,200];
 
             // Se inicializan los triangulos de manera aleatoria
-            for (int i = 0; i < nPolygons; i++) genes[i] = new Polygon(nVertex, Mat.RandomColor());
+            for (int i = 0; i < nShapes; i++)
+            {
+                //genes[i] = new Polygon(nVertex, Mat.RandomColor());
+
+                genes[i] = new Ellipse(Mat.RandomPoint(200), Mat.Random(10, 200), Mat.Random(10, 200), Mat.RandomColor());
+            }
         }
 
         // Metodo que calcula el valor fitness del individuo
@@ -87,9 +95,9 @@ namespace ImageGen
             DNA child = new DNA();
 
             // Se calcula el punto medio de manera aleatoria
-            int midpoint = Mat.Random(child.nPolygons);
+            int midpoint = Mat.Random(child.nShapes);
 
-            for(int i = 0; i < nPolygons; i++)
+            for(int i = 0; i < nShapes; i++)
             {
                 // Se heredan los genes al hijo
                 if (i < midpoint) child.genes[i] = genes[i];
@@ -105,9 +113,13 @@ namespace ImageGen
         public void Mutate(double mutationRate)
         {
             // Se recorre cada triangulo i
-            for(int i = 0; i < nPolygons; i++)
+            for(int i = 0; i < nShapes; i++)
             {
-                if (Mat.Random() < mutationRate) genes[i] = new Polygon(nVertex, Mat.RandomColor());
+                if (Mat.Random() < mutationRate)
+                {
+                    //genes[i] = new Polygon(nVertex, Mat.RandomColor());
+                    genes[i] = new Ellipse(Mat.RandomPoint(200), Mat.Random(10, 30), Mat.Random(10, 30), Mat.RandomColor());
+                }
             }
         }
 
@@ -121,11 +133,11 @@ namespace ImageGen
             // bitmap
             Graphics g = Graphics.FromImage(newPaint);
 
-            // Se coloca un fondo negro en el bitmap
+            // Se coloca un fondo negro
             g.Clear(Color.Black);
 
             // Se dibuja cada triagulo en el bitmap
-            for(int i = 0; i < nPolygons; i++) g.FillPolygon(genes[i].color, genes[i].vertex);
+            for (int i = 0; i < nShapes; i++) genes[i].Draw(g);
 
             GetColor();
         }

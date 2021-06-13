@@ -16,7 +16,11 @@ namespace ImageGen
             color = new SolidBrush(color_);
             vertex = new PointF[nVertex];
 
-            for (int i = 0; i < nVertex; i++) vertex[i] = Mat.RandomVertex(200);
+            for (int i = 0; i < nVertex; i++) vertex[i] = Mat.RandomPoint(200);
         }
+
+        // Funcion para dibujar el poligono en un objeto
+        // graphics
+        public void Draw(Graphics g) { g.FillPolygon(color, vertex); }
     }
 }

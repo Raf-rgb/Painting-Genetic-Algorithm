@@ -19,7 +19,7 @@ namespace ImageGen
             else return value;
         }
 
-        public static Color RandomColor() { return Color.FromArgb(Random(10, 50), Random(255), Random(255), Random(255)); }
+        public static Color RandomColor() { return Color.FromArgb(Random(10, 100), Random(255), Random(255), Random(255)); }
 
         public static Color RandomChanges(Color color, int c)
         {
@@ -37,7 +37,7 @@ namespace ImageGen
             return new PointF(newX, newY);
         }
 
-        public static PointF RandomVertex(int max)
+        public static PointF RandomPoint(int max)
         {
             return new PointF(Random(max), Random(max));
         }

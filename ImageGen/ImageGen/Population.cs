@@ -71,14 +71,14 @@ namespace ImageGen
 
                     DNA child = parent1.Crossover(parent2);
 
-                    child.Mutate(mutationRate);
+                    //child.Mutate(mutationRate);
 
                     pop[i] = child;
                 }
                 else
                 {
-                    //pop[i].Mutate(mutationRate);
-                    pop[i] = new DNA();
+                    pop[i].Mutate(mutationRate);
+                    //pop[i] = new DNA();
                 }
             }
         }

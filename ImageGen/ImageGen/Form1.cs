@@ -28,7 +28,7 @@ namespace ImageGen
 
             // Se inicializa la población de tamaño 10, con la 
             // imagen objetivo y con un porcentaje de mutacion del 1%
-            population = new Population(100, target, 0.01);
+            population = new Population(150, target, 0.01);
 
             // Se crea un hilo encargado de dibujar 
             // en pantalla la mejor pintura generada
@@ -82,7 +82,7 @@ namespace ImageGen
                 bestPictureBox.Image = newImage;
 
                 Bitmap saveImage = (Bitmap) newImage.Clone();
-                saveImage.Save("D:\\Images\\" + i + ".png", ImageFormat.Png);
+                saveImage.Save($"D:\\Images\\{i}.png", ImageFormat.Png);
 
                 // Se calcula la siguiente generacion
                 population.NextGeneration();
